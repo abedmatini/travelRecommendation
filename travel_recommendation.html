@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation Site - Home</title>
+    <style>
+        /* Basic reset and styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        /* Background image styling */
+        .background {
+            background-image: url('background.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-left: 80px; /* Space for social bar */
+        }
+
+        /* Dark overlay for readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navigation menu styling */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 2;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Search bar styling */
+        .search-bar {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Content styling */
+        .content {
+            z-index: 2;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0.5em 0;
+        }
+
+        .intro, .company-info, .team-info {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+
+        /* Social media vertical bar styling */
+        .social-bar {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            z-index: 2;
+        }
+
+        .social-bar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #fff;
+            transform: translateX(-50%);
+        }
+
+        .social-bar a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .social-bar a:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Navigation Bar with Search -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <input type="text" id="search-input" placeholder="Search recommendations...">
+            <button id="search-button">Search</button>
+            <button id="reset-button">Reset</button>
+        </nav>
+        <!-- Social media vertical bar -->
+        <div class="social-bar">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <!-- Main content with heading, intro, and button -->
+        <div class="content">
+            <h1>Discover Your Next Adventure</h1>
+            <p class="intro">
+                Welcome to our travel recommendation site. Explore top travel destinations, get personalized travel tips, and start planning the perfect getaway!
+            </p>
+            <button class="get-started-button">Get Started</button>
+        </div>
+
+    <div id="recommendation-results" class="recommendation-container">
+        <!-- Travel recommendations will be displayed here -->
+    </div>
+    </div>
+
+    <!-- Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
